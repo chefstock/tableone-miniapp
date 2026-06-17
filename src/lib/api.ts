@@ -5,7 +5,7 @@
  * Base URL: из VITE_API_URL (.env) или относительный /api/miniapp
  */
 
-const BASE = 'https://bkr-api.alacarte.uz/api/miniapp';
+const BASE = import.meta.env.VITE_API_URL || '/api/miniapp';
 
 async function request<T>(
   path: string,
